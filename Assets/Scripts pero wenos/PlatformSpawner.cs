@@ -7,7 +7,7 @@ public class PlatformSpawner : MonoBehaviour
     public float verticalSpacing = 3f;
     public float minX = -2f, maxX = 2f;
 
-    private float nextY = 0f;
+    public float nextY = 0f;
 
     void Start()
     {
@@ -20,7 +20,7 @@ public class PlatformSpawner : MonoBehaviour
         if (platform == null) return; // Nada disponible, no hacer nada
 
         float randomX = Random.Range(minX, maxX);
-        platform.transform.position = new Vector3(randomX, nextY, 0f);
+        platform.transform.localPosition = new Vector3(randomX, nextY, 0f);
         nextY += verticalSpacing;
     }
 

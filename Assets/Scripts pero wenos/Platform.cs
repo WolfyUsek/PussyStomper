@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -15,8 +16,9 @@ public class Platform : MonoBehaviour
         BoxCollider2D colliderBox = gameObject.GetComponent<BoxCollider2D>();
         colliderBox.enabled = false;
         hasGivenPoint = false; 
+       
     }
-   
+  
 
     IEnumerator MoveWorldDown()
     {

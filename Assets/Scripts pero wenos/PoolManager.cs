@@ -26,6 +26,7 @@ public class PoolManager : MonoBehaviour
             
             GameObject obj = platformPool.Dequeue();
             obj.SetActive(true);
+           
             
             return obj;
         }
@@ -37,6 +38,7 @@ public class PoolManager : MonoBehaviour
     public void ReturnPlatform(GameObject platform)
     {
         platform.SetActive(false);
+        
         platform.transform.SetParent(platformParent); // asegurar jerarquía
         platformPool.Enqueue(platform);
     }
