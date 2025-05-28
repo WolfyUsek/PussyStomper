@@ -3,7 +3,7 @@ using UnityEngine;
 public class FollowSomething : MonoBehaviour
 {
  
-    [SerializeField] public Transform player;
+    [SerializeField] public Transform player, spawner;
     [SerializeField] public Player playerScript;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -17,7 +17,7 @@ public class FollowSomething : MonoBehaviour
    
         if (playerScript.isGrounded == true)
         {
-        transform.position = new Vector2(0,player.transform.position.y+1);
+        //spawner.transform.position = new Vector2(0, player.transform.position.y);
 
         }
     }
