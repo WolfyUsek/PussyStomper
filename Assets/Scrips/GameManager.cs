@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] GameObject player, pantallaLose;
+    [SerializeField] GameObject player, pantallaLose, videogame;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (player.active == false)
+        if (player.active == false && videogame.active == true)
         {
             pantallaLose.SetActive(true);
             if (Input.GetKeyDown(KeyCode.W))
